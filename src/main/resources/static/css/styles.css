@@ -4,6 +4,7 @@
 }
 body{
     background-image: linear-gradient(to bottom right, cornflowerblue, lightgrey);
+    font-family: 'Montserrat', sans-serif;
 }
 .container{
     height: 1400px;
@@ -11,4 +12,10 @@ body{
 }
 .card{
     position: absolute;
+}
+.footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: transparent;
 }
