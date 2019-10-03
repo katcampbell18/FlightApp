@@ -10,5 +10,5 @@ body{
     overflow: hidden;
 }
 .card{
-    padding: 20px;
+    position: absolute;
 }

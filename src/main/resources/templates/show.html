@@ -7,12 +7,20 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Show Flight</title>
+    <style>
+        body{
+            background-image: linear-gradient(to bottom right, cornflowerblue, lightgrey);
+        }
+    </style>
 </head>
 <body>
 <div th:insert="base :: navbar"></div>
 <h2 style="text-align: center;">Flight Info</h2>
 <div class="container">
-    <div class="card bg-info">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+    <div class="card bg-info" style="width: 36rem;">
         <div class="card-header" style="font-weight: bold" th:text="${flight.airline}">
         </div>
         <ul class="list-group list-group-flush">
@@ -27,32 +35,11 @@
 <!--            <a th:href="@{/delete/{id}(id=${flight.id})}" class="card-link">Delete this flight</a>-->
         </div>
     </div>
-<!--    <div class="row" th:text="${flight.airline}"></div>-->
-<!--    <div class="row">-->
-<!--        <div class="col-lg-6">Start Airport: </div>-->
-<!--        <div class="col-lg-6" th:text="${flight.start_loc}"></div>-->
-<!--    </div>-->
-<!--    <div class="row">-->
-<!--        <div class="col-lg-6">End Airport: </div>-->
-<!--        <div class="col-lg-6" th:text="${flight.end_loc}"></div>-->
-<!--    </div>-->
-<!--    <div class="row">-->
-<!--        <div class="col-lg-6">Start Date: </div>-->
-<!--        <div class="col-lg-6" th:text="${#dates.format(flight.start_date, 'yyyy-MM-dd')}"></div>-->
-<!--    </div>-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-6">End Date: </div>-->
-<!--            <div class="col-lg-6" th:text="${#dates.format(flight.end_date, 'yyyy-MM-dd')}"></div>-->
-<!--            </div>-->
-<!--    <div class="row">-->
-<!--        <div class="col-lg-6">Price($): </div>-->
-<!--        <div class="col-lg-6" th:text="${flight.price}"></div>-->
-<!--        </div>-->
-<!--&nbsp;-->
-<!--    <div class="row">-->
-<!--            <a th:href="@{/delete/{id}(id=${flight.id})}" class="btn btn-danger">Delete this flight</a>-->
-<!--        </div>-->
+        </div>
+        <div class="col-lg-3"></div>
     </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
